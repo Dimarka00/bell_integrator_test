@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ShoppingCart implements Busket {
+public class ShoppingCart implements Basket {
 
     private Map<String, Integer> products = new HashMap<>();
 

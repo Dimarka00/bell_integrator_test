@@ -3,6 +3,7 @@ package task3;
 import java.util.*;
 
 public class Staff {
+
     public static void main(String[] args) {
         List<Map<String, String>> employersList = new ArrayList<>();
         employersList.add(new HashMap<String, String>() {{
@@ -29,6 +30,7 @@ public class Staff {
             put("Должность", "dev-ops");
             put("Зарплата", "1500$");
         }});
+
         List<Map<String, String>> employersUnderThirty = employersList
                 .stream()
                 .filter(o -> Integer.parseInt(o.get("Возраст")) < 30)
@@ -43,11 +45,10 @@ public class Staff {
         System.out.println("\nСотрудники, получающие зарплату в рублях: ");
         salaryInRuble.forEach(o -> System.out.println(o.get("Имя")));
 
-        Integer averageAge = employersList
+        int averageAge = employersList
                 .stream()
                 .mapToInt(o -> Integer.parseInt(o.get("Возраст"))).sum() / employersList.size();
         System.out.println("\nСредний возраст всех сотрудников: " + averageAge);
-
     }
 }
 

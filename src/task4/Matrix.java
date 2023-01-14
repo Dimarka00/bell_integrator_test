@@ -1,6 +1,7 @@
 package task4;
 
-public class Main {
+public class Matrix {
+
     public static void main(String[] args) {
         int[][] matrix = {
                 {1, 2, 3, 4, 5},
@@ -11,9 +12,9 @@ public class Main {
         };
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < matrix.length; i++) {
-            if (i == matrix.length/2) continue;
-            if (matrix[i][matrix.length-i-1] < min) {
-                min = matrix[i][matrix.length-i-1];
+            if (i == matrix.length / 2) continue;
+            if (matrix[i][matrix.length - i - 1] < min) {
+                min = matrix[i][matrix.length - i - 1];
             }
         }
 

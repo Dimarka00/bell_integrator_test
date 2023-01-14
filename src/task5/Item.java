@@ -3,6 +3,7 @@ package task5;
 import java.util.Objects;
 
 public class Item {
+
     int weight;
     int cost;
     String name;
